@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Estadística Aplicada a la Educación</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+</head>
+<body class="bg-[#F0F9FF] text-gray-800">
+
+    <header class="bg-[#005691] text-white py-8 shadow-xl w-full">
+        <div class="px-4 md:px-6 text-center"> 
+            <img src="https://www.uchapultepec.edu.mx/assets/logo-color.svg" alt="[Image of Logo de Estadística]" class="mx-auto mb-4 w-62 h-62"> 
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+                Estadística Aplicada a la Educación
+            </h1>
+            <p class="text-xl md:text-2xl mt-3 opacity-90">
+                <i>"Un análisis integral para profesionales y estudiantes de la educación"</i> <br> Clave de la asignatura: <b>MPGE-105</b> 
+            </p>
+        </div>
+    </header>
+
+    <nav id="sticky-nav" class="py-3 shadow-md mb-10 w-full">
+        <div class="flex flex-wrap justify-center items-center space-x-1 sm:space-x-2 md:space-x-4 px-2"> 
+            <a href="#horario" class="nav-link text-xs sm:text-sm md:text-base"><b>Horario</b></a>
+            <a href="#introduccion" class="nav-link text-xs sm:text-sm md:text-base"><b>Introducción</b></a>
+            <a href="#historia" class="nav-link text-xs sm:text-sm md:text-base"><b>Historia</b></a>
+            <a href="#teorias" class="nav-link text-xs sm:text-sm md:text-base"><b>Teorías Clave</b></a>
+            <a href="#aplicaciones" class="nav-link text-xs sm:text-sm md:text-base"><b>Aplicaciones</b></a>
+            <a href="#curso" class="nav-link text-xs sm:text-sm md:text-base"><b>Curso</b></a>
+            <a href="#temario" class="nav-link text-xs sm:text-sm md:text-base"><b>Temario</b></a>
+            <a href="#referencias" class="nav-link text-xs sm:text-sm md:text-base"><b>Referencias</b></a>
+        </div>
+    </nav>
+
+    <main class="w-full px-4 md:px-6"> 
+        <section id="horario" class="section-card scroll-mt-20">
+            <h2 class="font-bold">Horario del Curso y Sesiones en Línea 🗓️</h2>
+            <p class="mb-6 text-base leading-relaxed">A continuación se detalla el horario de cada sesión del curso, incluyendo las fechas y el enlace para acceder a las clases en línea.</p>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+                    <thead class="bg-[#00A8E8] text-white">
+                        <tr>
+                            <th class="py-2 px-4 text-left text-sm font-semibold border-b border-gray-300 rounded-tl-lg">Sesión</th>
+                            <th class="py-2 px-4 text-left text-sm font-semibold border-b border-gray-300">Fecha</th>
+                            <th class="py-2 px-4 text-left text-sm font-semibold border-b border-gray-300">Hora (CST)</th>
+                            <th class="py-2 px-4 text-left text-sm font-semibold border-b border-gray-300 rounded-tr-lg">Enlace a la Sesión</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-2 px-4 text-sm text-gray-700">Sesión 1: Introducción y Estadística Descriptiva</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">31 de mayo de 2025</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">8:00 AM - 12:00 PM</td>
+                            <td class="py-2 px-4 text-sm text-blue-600 hover:underline"><a href="https://meet.google.com/abc-defg-hij" target="_blank">Unirse a la Sesión 1</a></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-2 px-4 text-sm text-gray-700">Sesión 2: Teoría de la Probabilidad y Variables Aleatorias</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">7 de junio de 2025</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">8:00 AM - 12:00 PM</td>
+                            <td class="py-2 px-4 text-sm text-blue-600 hover:underline"><a href="https://meet.google.com/klm-nopq-rst" target="_blank">Unirse a la Sesión 2</a></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-2 px-4 text-sm text-gray-700">Sesión 3: Estadística Inferencial: Estimación y Pruebas de Hipótesis</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">14 de junio de 2025</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">8:00 AM - 12:00 PM</td>
+                            <td class="py-2 px-4 text-sm text-blue-600 hover:underline"><a href="https://meet.google.com/uvw-xyz-abc" target="_blank">Unirse a la Sesión 3</a></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-2 px-4 text-sm text-gray-700">Sesión 4: Análisis de Asociación, Correlación y Regresión</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">21 de junio de 2025</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">8:00 AM - 12:00 PM</td>
+                            <td class="py-2 px-4 text-sm text-blue-600 hover:underline"><a href="https://meet.google.com/def-ghi-jkl" target="_blank">Unirse a la Sesión 4</a></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-2 px-4 text-sm text-gray-700">Sesión 5: Aplicaciones Avanzadas y Casos Prácticos</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">28 de junio de 2025</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">8:00 AM - 12:00 PM</td>
+                            <td class="py-2 px-4 text-sm text-blue-600 hover:underline"><a href="https://meet.google.com/mno-pqr-stu" target="_blank">Unirse a la Sesión 5</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="mt-6 text-base leading-relaxed text-center">Asegúrate de unirte a tiempo a cada sesión para no perderte ningún contenido importante.</p>
+        </section>
+
+        <section id="introduccion" class="section-card scroll-mt-20">
+            <h2 class="font-bold">1. Introducción: El Poder de los Datos en Educación ✨</h2>
+            <p class="mb-4 text-base leading-relaxed" style="text-align: justify;">
+                La <i>estadística aplicada a la educación</i> transforma datos brutos en información significativa, orientando decisiones cruciales sobre diseño curricular, métodos de enseñanza y políticas educativas. 
+                Es una herramienta indispensable para la gestión moderna, permitiendo identificar patrones y regularidades en fenómenos educativos.
+                El <b>objetivo fundamental</b> de la estadística aplicada a la educación es:
+            </p>
+            <div class="text-center bg-[#E0F7FA] p-6 rounded-lg shadow">
+                <p class="kpi-value">Tomar decisiones basadas en datos</p>
+                <p class="kpi-label">Esto se considera el <b>fundamento</b> de la mejora educativa 🎓</p>
+            </div>
+            <p class="mt-6 text-base leading-relaxed" style="text-align: justify;">
+                Este enfoque combina análisis <b>cualitativos</b> y <b>cuantitativos</b> para una comprensión integral, superando dicotomías y facilitando una mejora sustancial en la calidad educativa.
+                El propósito de este curso es proporcionar una base sólida para estudiantes de posgrado y profesionales de la educación y la salud, equipándolos con el conocimiento estadístico necesario para la <b>planificación</b> y <b>gestión</b> educativa.
+            </p>
+            <div class="flex justify-center mt-6">
+                <img src="https://blog.pearsonlatam.com/hs-fs/hubfs/Blog/persona-en-planeacion-grafica.jpg?width=800&name=persona-en-planeacion-grafica.jpg" alt="[Image of Persona en planeacion grafica]" class="rounded-lg shadow-md max-w-full h-auto w-[300px] h-[150px]">
+            </div>
+        </section>
+
+        <section id="historia" class="section-card scroll-mt-20">
+            <h2 class="font-bold">2. Evolución Histórica de la Estadística en Educación 🕰️</h2>
+            <p class="mb-6 text-base leading-relaxed">Desde sus raíces en el positivismo del siglo XIX hasta la era digital, la estadística ha consolidado su papel como pilar de la investigación y la práctica educativa.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">Siglo XIX - 1905</div>
+                    <p class="text-sm text-gray-700">Influencia del positivismo (Comte). Contribuciones de Wundt, Galton, Pearson. Acuñación de "test mental" (1891), Escala de Inteligencia Binet-Simon (1905). 🧠</p>
+                    <p class="text-sm text-gray-600 mb-2 text-justify">Profundiza en los inicios de la estadística en la pedagogía y la influencia del positivismo en su adopción.</p>
+                    <button class="ml-2 px-3 py-1 bg-[#00A8E8] text-white text-xs rounded-md hover:bg-[#0088CC] transition-colors" onclick="toggleExplanation('antecedentes')">Más información ✨</button>
+                            <div id="antecedentes" class="hidden mt-2 p-3 bg-blue-50 rounded-md text-sm text-gray-700 border border-blue-200">
+                                <p style="text-align: justify;">
+                                    Antecedentes y Consolidación (Siglo XIX - 1930s). La estadística ha mantenido una presencia constante en la pedagogía a lo largo del siglo XX, con sus orígenes firmemente arraigados en el <b>siglo XIX</b>. Un factor determinante en su adopción fue la influencia del <b>positivismo</b>, un marco filosófico que priorizaba la <b>objetividad</b> y la <b>experiencia</b> como pilares del conocimiento válido. 
+                                    <b>August Comte</b>, considerado el fundador del positivismo, abogó por un cambio social integral, proponiendo que un sistema educativo auténtico solo podría organizarse bajo los principios de esta filosofía. Esta perspectiva impulsó la aplicación de <b>métodos matemáticos</b> a los estudios educativos, buscando una base <b>empírica</b> para la comprensión y mejora de los procesos de enseñanza y aprendizaje.
+                                    El desarrollo de disciplinas como la <b>psicofísica</b>, la <b>psicología</b> y la <b>medición</b> fue crucial, ya que establecieron la conexión entre la realidad observable y las sensaciones individuales. Investigadores prominentes como <b>Wundt</b>, <b>Galton</b> y <b>Pearson</b> realizaron contribuciones significativas en este período. Las aplicaciones estadísticas de <b>Pearson</b>, en particular, demostraron una utilidad directa 
+                                    para la investigación educativa. Paralelamente, la pedagogía empírica de <b>Herbart</b>, que fusionó la realidad científica de su época con sus propias ideas sobre educación y psicología, sentó las bases para la consolidación de la <b>pedagogía experimental</b>, especialmente a través de estudios sobre la <b>medición de la inteligencia</b> y las aptitudes. Hitos tempranos incluyen la acuñación del término 
+                                    "<b>test mental</b>" en 1891, el programa de <b>Boas</b> para la medición de niños en 1894, y la publicación de la primera <b>Escala de Inteligencia</b> por <b>Binet y Simon</b> en 1905. Para la década de 1930, el conocimiento estadístico ya se consideraba firmemente establecido dentro de la <b>Ciencia de la Educación</b>. Este desarrollo subraya que la integración de la estadística en la educación no fue meramente una 
+                                    evolución técnica, sino que estuvo profundamente influenciada por una postura filosófica que buscaba la <b>medición objetiva</b> y la <b>validación empírica</b> en el ámbito educativo. La búsqueda de la objetividad, impulsada por el positivismo, llevó directamente al desarrollo y la aplicación de <b>herramientas estadísticas</b>, consolidando así su papel central en la <b>investigación pedagógica</b>. 
+                                </p>
+                            </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1930s - 1960s</div>
+                    <p class="text-sm text-gray-700">Consolidación de la estadística en la Ciencia de la Educación. Publicación de "Statistical Methods" (Snedecor, 1937). Énfasis en análisis de datos (Tukey, 1960s). 📊</p>
+                    <p class="text-sm text-gray-600 mb-2 text-justify">Descubre cómo la estadística se consolidó y el cambio de enfoque hacia el análisis de datos.</p>
+                    <button class="ml-2 px-3 py-1 bg-[#00A8E8] text-white text-xs rounded-md hover:bg-[#0088CC] transition-colors" onclick="toggleExplanation('60s')">Más información ✨</button>
+                            <div id="60s" class="hidden mt-2 p-3 bg-blue-50 rounded-md text-sm text-gray-700 border border-blue-200">
+                                <p style="text-align: justify;">
+                                    Tras la década de <b>1930</b>, la estadística en la educación continuó su expansión y refinamiento. 
+                                    En 1937, <b>Snedecor</b> publicó "<b>Statistical Methods</b>", un texto influyente que explicaba las ideas 
+                                    de <b>Fisher</b>, un pionero en el análisis estadístico. La década de 1940, conocida como 
+                                    "<b>The War Years</b>", vio a estadísticos como <b>W. Edwards Deming</b>, de la Oficina del Censo, abogar 
+                                    por una mayor inclusión de <b>contenido estadístico</b> en los currículos de matemáticas de la escuela 
+                                    secundaria. Los años <b>60</b>, denominados "<b>The Revolutionary Years</b>", fueron testigos de un cambio significativo 
+                                    en el plan de estudios de la escuela secundaria, que pasó de un énfasis predominante en la 
+                                    <b>probabilidad</b> a uno en el <b>análisis de datos</b>. <b>John Tukey</b>, profesor de Estadística en Princeton, 
+                                    fue una figura clave en esta transición, adaptando los <b>conceptos estadísticos</b> para hacerlos 
+                                    más apropiados y aplicables al nivel de la escuela secundaria. Este cambio reflejó una 
+                                    creciente comprensión de la <b>utilidad práctica</b> del análisis de datos en diversos campos.
+                                </p>
+                            </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1980s - 1990s</div>
+                    <p class="text-sm text-gray-700">Integración formal en estándares de currículo (NCTM). Desarrollo de programas de alfabetización estadística. Aprobación de AP Statistics (1995). 📚</p>
+                    <p class="text-sm text-gray-600 mb-2 text-justify">Conoce la formalización de la estadística en los currículos educativos y el impulso a la alfabetización cuantitativa.</p>
+                    <button class="ml-2 px-3 py-1 bg-[#00A8E8] text-white text-xs rounded-md hover:bg-[#0088CC] transition-colors" onclick="toggleExplanation('80s')">Más información ✨</button>
+                            <div id="80s" class="hidden mt-2 p-3 bg-blue-50 rounded-md text-sm text-gray-700 border border-blue-200">
+                                <p style="text-align: justify;">
+                                    Durante los años <b>80</b>, la "<b>Progressive Era</b>", la estadística se integró formalmente en los 
+                                    <b>Estándares de Currículo y Evaluación</b> del <b>Consejo Nacional de Maestros de Matemáticas (NCTM)</b>. 
+                                    El <b>Comité Conjunto de la Asociación Americana de Estadística (ASA)</b> y el <b>NCTM</b>, a través de su 
+                                    <b>Proyecto de Alfabetización Cuantitativa (QLP)</b> financiado por la <b>Fundación Nacional de Ciencias (NSF)</b>, desarrolló programas de <b>desarrollo profesional</b> en <b>educación estadística</b> para educadores 
+                                    de primaria y secundaria en todo el país. Esto marcó un esfuerzo concertado para ampliar la 
+                                    <b>alfabetización estadística</b> más allá de los círculos académicos especializados. 
+                                </p>
+                            </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2000s - Actualidad</div>
+                    <p class="text-sm text-gray-700">Aumento de contenido estadístico en escuelas públicas. Inclusión en evaluaciones NAEP. Establecimiento de GAISE (2007). Democratización de la alfabetización estadística. 🌐</p>
+                    <p class="text-sm text-gray-600 mb-2 text-justify">Explora la democratización de la estadística y su papel actual como habilidad fundamental en la era de los datos.</p>
+                    <button class="ml-2 px-3 py-1 bg-[#00A8E8] text-white text-xs rounded-md hover:bg-[#0088CC] transition-colors" onclick="toggleExplanation('2000')">Más información ✨</button>
+                            <div id="2000" class="hidden mt-2 p-3 bg-blue-50 rounded-md text-sm text-gray-700 border border-blue-200">
+                                <p style="text-align: justify;">
+                                    Ya en la década de <b>2000</b>, la "<b>Turn of the Century</b>", el <b>Consejo Nacional de Investigación (MSEB)</b> apoyó un aumento del <b>contenido de estadística</b> en las escuelas públicas, y el curso de 
+                                    <b>AP Statistics</b> fue aprobado en 1995, con la administración de exámenes comenzando en 1997. 
+                                    Además, la <b>Evaluación Nacional del Progreso Educativo (NAEP)</b> incluyó la <b>probabilidad</b> y la 
+                                    <b>estadística</b> como un área de aprendizaje para sus evaluaciones de 4º, 8º y 12º grado. 
+                                    Un hito importante fue el establecimiento de las "<b>Guidelines for Assessment and Instruction 
+                                    in Statistics Education</b>" (<b>GAISE</b>) en 2007, que definieron <b>estándares de aprendizaje de 
+                                    estadística</b> apropiados para los currículos de K-12. Esta progresión, desde el énfasis 
+                                    teórico inicial hasta un enfoque más amplio y práctico en el <b>análisis de datos</b>, junto 
+                                    con los esfuerzos por integrar la estadística en los niveles educativos básicos, demuestra 
+                                    un reconocimiento creciente de su <b>utilidad práctica</b> en la vida cotidiana y en diversas 
+                                    profesiones. La preocupación por la capacitación de los docentes para enseñar estos 
+                                    conceptos  revela un desafío sistémico en la expansión de la <b>educación estadística</b>. 
+                                    Sin embargo, el impulso por la integración en K-12 y la formación de docentes indica 
+                                    una estrategia a largo plazo para "<b>democratizar</b>" la <b>alfabetización estadística</b>, 
+                                    haciéndola accesible y relevante para una población mucho más amplia, en lugar de 
+                                    limitarla a un grupo selecto de investigadores. Este cambio social hacia la <b>toma de 
+                                    decisiones basada en datos</b>, impulsado por el aumento de la <b>capacidad informática</b> y 
+                                    la <b>exploración espacial</b>, ha transformado la estadística de una disciplina matemática 
+                                    especializada en una <b>habilidad fundamental</b> para la <b>ciudadanía informada</b> y la <b>competencia
+                                    profesional</b>, lo que valida directamente el objetivo del curso propuesto de capacitar a 
+                                    estudiantes de posgrado y profesionales en este ámbito. 
+                                </p>
+                            </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="teorias" class="section-card scroll-mt-20">
+            <h2 class="font-bold">3. Principales Teorías Estadísticas Aplicadas 💡</h2>
+            <p class="mb-6 text-base leading-relaxed">El curso abarca las áreas fundamentales de la estadística, esenciales para el análisis y la interpretación de datos en educación y salud.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="font-semibold">Foco del Curso por Área Estadística</h3>
+                    <p class="text-sm text-gray-600 mb-3">Distribución de la atención entre los pilares de la estadística aplicada, reflejando su importancia en la gestión educativa. 🎯</p>
+                    <div class="chart-container h-[280px] md:h-[300px]">
+                        <canvas id="statisticalAreasChart"></canvas>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold">Conceptos Clave por Área</h3>
+                    <ul class="list-disc list-inside text-base leading-relaxed space-y-2 pl-4 text-gray-700">
+                        <li>
+                            <b>Fundamentos:</b> Población, Muestra, Escalas de Medición, Variables.
+                            <button class="ml-2 px-3 py-1 bg-[#00A8E8] text-white text-xs rounded-md hover:bg-[#0088CC] transition-colors" onclick="toggleExplanation('explanation_fundamentos')">Explicar Concepto ✨</button>
+                            <div id="explanation_fundamentos" class="hidden mt-2 p-3 bg-blue-50 rounded-md text-sm text-gray-700 border border-blue-200">
+                                <p style="text-align: justify;">La <b>Población</b> es el grupo total de interés (ej. todos los estudiantes de un país). La <b>Muestra</b> es un subconjunto representativo de la población (ej. 1000 estudiantes seleccionados). Las <b>Escalas de Medición</b> (nominal, ordinal, intervalo, razón) definen cómo se clasifican los datos. Las <b>Variables</b> son características que cambian (ej. edad, género).</p>
+                            </div>
+                        </li>
+                        <li>
+                            <b>Descriptiva:</b> Medidas de Tendencia Central y Dispersión, Gráficos.
+                            <button class="ml-2 px-3 py-1 bg-[#00A8E8] text-white text-xs rounded-md hover:bg-[#0088CC] transition-colors" onclick="toggleExplanation('explanation_descriptiva')">Explicar Concepto ✨</button>
+                            <div id="explanation_descriptiva" class="hidden mt-2 p-3 bg-blue-50 rounded-md text-sm text-gray-700 border border-blue-200">
+                                <p style="text-align: justify;">La <b>Estadística Descriptiva</b> resume datos. Las <b>Medidas de Tendencia Central</b> (media, mediana, moda) indican el valor típico. Las <b>Medidas de Dispersión</b> (rango, desviación estándar) muestran la variabilidad. Los <b>Gráficos</b> visualizan patrones (ej. histogramas de calificaciones).</p>
+                            </div>
+                        </li>
+                        <li>
+                            <b>Probabilidad:</b> Reglas, Teorema de Bayes, Distribuciones (Normal, Binomial, Poisson).
+                            <button class="ml-2 px-3 py-1 bg-[#00A8E8] text-white text-xs rounded-md hover:bg-[#0088CC] transition-colors" onclick="toggleExplanation('explanation_probabilidad')">Explicar Concepto ✨</button>
+                            <div id="explanation_probabilidad" class="hidden mt-2 p-3 bg-blue-50 rounded-md text-sm text-gray-700 border border-blue-200">
+                                <p style="text-align: justify;">La <b>Probabilidad</b> cuantifica la posibilidad de un evento. Las <b>Reglas de Probabilidad</b> (suma, multiplicación) combinan probabilidades. El <b>Teorema de Bayes</b> actualiza probabilidades con nueva información. Las <b>Distribuciones</b> (Normal, Binomial, Poisson) describen cómo se distribuyen los datos.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <b>Inferencial:</b> Estimación (Puntual/Intervalar), Pruebas de Hipótesis, Valor p.
+                            <button class="ml-2 px-3 py-1 bg-[#00A8E8] text-white text-xs rounded-md hover:bg-[#0088CC] transition-colors" onclick="toggleExplanation('explanation_inferencial')">Explicar Concepto ✨</button>
+                            <div id="explanation_inferencial" class="hidden mt-2 p-3 bg-blue-50 rounded-md text-sm text-gray-700 border border-blue-200">
+                                <p style="text-align: justify;">La <b>Estadística Inferencial</b> generaliza de una muestra a una población. La <b>Estimación</b> puede ser puntual (un valor) o intervalar (un rango de confianza). Las <b>Pruebas de Hipótesis</b> evalúan afirmaciones sobre la población. El <b>Valor p</b> ayuda a decidir si un resultado es estadísticamente significativo.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <b>Asociación:</b> Regresión (Simple/Múltiple), Correlación, ANOVA.
+                            <button class="ml-2 px-3 py-1 bg-[#00A8E8] text-white text-xs rounded-md hover:bg-[#0088CC] transition-colors" onclick="toggleExplanation('explanation_asociacion')">Explicar Concepto ✨</button>
+                            <div id="explanation_asociacion" class="hidden mt-2 p-3 bg-blue-50 rounded-md text-sm text-gray-700 border border-blue-200">
+                                <p style="text-align: justify;">El <b>Análisis de Asociación</b> examina relaciones entre variables. La <b>Correlación</b> mide la fuerza y dirección de una relación lineal. La <b>Regresión</b> predice una variable a partir de otra(s). <b>ANOVA</b> compara medias de tres o más grupos.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="aplicaciones" class="section-card scroll-mt-20">
+            <h2 class="font-bold">4. Rol en Planificación y Gestión Educativa 🛠️</h2>
+            <p class="mb-6 text-base leading-relaxed">La estadística es una herramienta indispensable para la gestión educativa moderna, transformando la toma de decisiones y optimizando la asignación de recursos.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-5 bg-[#E0F7FA] rounded-lg shadow-md text-center">
+                    <span class="text-4xl text-[#005691]">📊</span>
+                    <h3 class="font-semibold text-lg mt-3 text-gray-700">Toma de Decisiones Informada</h3>
+                    <p class="text-sm text-gray-600 mt-1">De la intuición a la evidencia para políticas efectivas. ✅</p>
+                </div>
+                <div class="p-5 bg-[#E0F7FA] rounded-lg shadow-md text-center">
+                    <span class="text-4xl text-[#005691]">📈</span>
+                    <h3 class="font-semibold text-lg mt-3 text-gray-700">Evaluación de Programas</h3>
+                    <p class="text-sm text-gray-600 mt-1">Medición rigurosa de la eficacia de métodos y currículos. 🔍</p>
+                </div>
+                <div class="p-5 bg-[#E0F7FA] rounded-lg shadow-md text-center">
+                    <span class="text-4xl text-[#005691]">💰</span>
+                    <h3 class="font-semibold text-lg mt-3 text-gray-700">Optimización de Recursos</h3>
+                    <p class="text-sm text-gray-600 mt-1">Asignación eficiente de fondos y personal basada en datos.💲</p>
+                </div>
+            </div>
+            <p class="mt-6 text-base leading-relaxed text-center">Este enfoque proactivo minimiza el desperdicio y maximiza el impacto en la calidad educativa, fomentando un liderazgo basado en datos.</p>
+        </section>
+
+        <section id="curso" class="section-card scroll-mt-20">
+            <h2 class="font-bold">5. Estructura del Curso de 20 Horas 🗓️</h2>
+            <p class="mb-6 text-base leading-relaxed">El curso "Estadística Aplicada a la Educación" se estructura en 5 sesiones de 4 horas cada una, cubriendo desde los fundamentos hasta las aplicaciones avanzadas.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="course-session-card">
+                    <div class="course-session-title">Sesión 1: Introducción y Estadística Descriptiva</div>
+                    <div class="course-session-hours">4 horas</div>
+                    <ul class="course-session-objectives">
+                        <li>Comprender conceptos básicos y escalas de medición.</li>
+                        <li>Aplicar técnicas descriptivas e interpretar medidas.</li>
+                    </ul>
+                </div>
+                <div class="course-session-card">
+                    <div class="course-session-title">Sesión 2: Teoría de la Probabilidad y Variables Aleatorias</div>
+                    <div class="course-session-hours">4 horas</div>
+                    <ul class="course-session-objectives">
+                        <li>Comprender reglas de probabilidad y Teorema de Bayes.</li>
+                        <li>Identificar y trabajar con distribuciones comunes.</li>
+                    </ul>
+                </div>
+                <div class="course-session-card">
+                    <div class="course-session-title">Sesión 3: Estadística Inferencial: Estimación y Pruebas de Hipótesis</div>
+                    <div class="course-session-hours">4 horas</div>
+                    <ul class="course-session-objectives">
+                        <li>Aplicar estimación de parámetros.</li>
+                        <li>Formular y probar hipótesis.</li>
+                    </ul>
+                </div>
+                <div class="course-session-card">
+                    <div class="course-session-title">Sesión 4: Análisis de Asociación, Correlación y Regresión</div>
+                    <div class="course-session-hours">4 horas</div>
+                    <ul class="course-session-objectives">
+                        <li>Analizar relaciones con tablas de contingencia.</li>
+                        <li>Aplicar modelos de regresión y análisis de varianza.</li>
+                    </ul>
+                </div>
+                <div class="course-session-card md:col-span-2 lg:col-span-1">
+                    <div class="course-session-title">Sesión 5: Aplicaciones Avanzadas y Casos Prácticos</div>
+                    <div class="course-session-hours">4 horas</div>
+                    <ul class="course-session-objectives">
+                        <li>Aplicar métodos avanzados en evaluación de programas.</li>
+                        <li>Utilizar datos para optimización de recursos.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="mt-6 text-base leading-relaxed text-center">Este curso está diseñado para capacitar a estudiantes de posgrado y profesionales en el uso efectivo de la estadística para la toma de decisiones informadas en educación y salud.</p>
+        </section>
+
+        <section id="temario" class="section-card scroll-mt-20">
+            <h2 class="font-bold">6. Temario Detallado del Curso 📚</h2>
+            <p class="mb-6 text-base leading-relaxed">Este es el desglose completo del contenido que se cubrirá en cada sesión del curso "Estadística Aplicada a la Educación".</p>
+
+            <div class="course-session-card">
+                <div class="course-session-title">Sesión 1: Introducción y Estadística Descriptiva (4 horas)</div>
+                <div class="course-session-hours">Objetivos de Aprendizaje:</div>
+                <ul class="course-session-objectives">
+                    <li>Comprender los antecedentes y el concepto de estadística en la investigación educativa.</li>
+                    <li>Identificar los tipos de estadística y las escalas de medición.</li>
+                    <li>Aplicar técnicas descriptivas para organizar y resumir datos educativos.</li>
+                    <li>Interpretar medidas de tendencia central y dispersión.</li>
+                </ul>
+                <div class="course-session-hours mt-4">Contenido Detallado:</div>
+                <ul class="course-session-objectives">
+                    <li><b>Fundamentos de Estadística en la Investigación Educativa:</b> Antecedentes históricos, Concepto y funciones, Tipos de estadística básica, Población y Muestreo, Escalas de medición (variables, clasificación, continuas y discretas).</li>
+                    <li><b>Estadística Descriptiva:</b> Concepto y objetivo, Descripción gráfica de datos (cualitativas, cuantitativas), Gráficas y distribución de frecuencias, Medidas de tendencia central (media, mediana, moda), Medidas de dispersión y variabilidad (rango, desviación estándar, varianza).</li>
+                </ul>
+            </div>
+
+            <div class="course-session-card">
+                <div class="course-session-title">Sesión 2: Teoría de la Probabilidad y Variables Aleatorias (4 horas)</div>
+                <div class="course-session-hours">Objetivos de Aprendizaje:</div>
+                <ul class="course-session-objectives">
+                    <li>Comprender los conceptos fundamentales y reglas de la probabilidad.</li>
+                    <li>Aplicar la probabilidad condicional y el teorema de Bayes en contextos educativos.</li>
+                    <li>Identificar y trabajar con distribuciones de probabilidad comunes (binomial, Poisson, normal).</li>
+                </ul>
+                <div class="course-session-hours mt-4">Contenido Detallado:</div>
+                <ul class="course-session-objectives">
+                    <li><b>Teoría de la Probabilidad:</b> Concepto y reglas de probabilidad, Principios fundamentales de la probabilidad, Probabilidad condicional y teorema de Bayes y sus aplicaciones en la investigación educativa.</li>
+                    <li><b>Variables Aleatorias y Distribuciones:</b> Binomial, Poisson y normal.</li>
+                    <li>Permutaciones, combinaciones, técnicas de conteo y tablas de contingencias.</li>
+                </ul>
+            </div>
+
+            <div class="course-session-card">
+                <div class="course-session-title">Sesión 3: Estadística Inferencial: Estimación y Pruebas de Hipótesis (4 horas)</div>
+                <div class="course-session-hours">Objetivos de Aprendizaje:</div>
+                <ul class="course-session-objectives">
+                    <li>Diferenciar entre estadística descriptiva e inferencial.</li>
+                    <li>Aplicar técnicas de estimación de parámetros (puntual e intervalar).</li>
+                    <li>Formular y probar hipótesis estadísticas en investigación educativa.</li>
+                    <li>Comprender el nivel de significancia, valor p y potencia.</li>
+                </ul>
+                <div class="course-session-hours mt-4">Contenido Detallado:</div>
+                <ul class="course-session-objectives">
+                    <li><b>Estadística Inferencial:</b> Concepto de estadística inferencial.</li>
+                    <li>Estimación de parámetros (puntual, intervalar).</li>
+                    <li>Prueba de Hipótesis estadísticas y muestras grandes.</li>
+                    <li>Nivel de significancia, valor p y potencia.</li>
+                    <li>Análisis paramétrico y no paramétrico.</li>
+                </ul>
+            </div>
+
+            <div class="course-session-card">
+                <div class="course-session-title">Sesión 4: Análisis de Asociación, Correlación y Regresión (4 horas)</div>
+                <div class="course-session-hours">Objetivos de Aprendizaje:</div>
+                <ul class="course-session-objectives">
+                    <li>Analizar relaciones con tablas de contingencia.</li>
+                    <li>Interpretar coeficientes de asociación para diferentes escalas.</li>
+                    <li>Aplicar modelos de regresión lineal simple y múltiple para predecir y entender relaciones entre variables.</li>
+                    <li>Realizar análisis de varianza y covarianza.</li>
+                    </ul>
+                <div class="course-session-hours mt-4">Contenido Detallado:</div>
+                <ul class="course-session-objectives">
+                    <li><b>Análisis de Asociación y Correlación:</b> Definición e interpretación de las tablas de contingencia.</li>
+                    <li>El Modelo de regresión y su prueba de utilidad.</li>
+                    <li>El modelo regresión múltiple y su evaluación a la ecuación.</li>
+                    <li>Medidas de Asociación (Chi-cuadrado, Phi, C de Spearman, V de Cramer, Gamma).</li>
+                    <li>Análisis de varianza y covarianza (ANOVA y ANCOVA).</li>
+                </ul>
+            </div>
+
+            <div class="course-session-card">
+                <div class="course-session-title">Sesión 5: Aplicaciones Avanzadas y Casos Prácticos en Gestión Educativa y de la Salud (4 horas)</div>
+                <div class="course-session-hours">Objetivos de Aprendizaje:</div>
+                <ul class="course-session-objectives">
+                    <li>Aplicar métodos estadísticos avanzados en la evaluación de programas y políticas educativas.</li>
+                    <li>Utilizar datos para la optimización de recursos y la mejora de la calidad educativa.</li>
+                    <li>Desarrollar un plan para la integración de la estadística en la toma de decisiones en sus respectivos campos.</li>
+                </ul>
+                <div class="course-session-hours mt-4">Contenido Detallado:</div>
+                <ul class="course-session-objectives">
+                    <li><b>Estadística en la Planificación y Gestión Educativa y de la Salud:</b> Rol de la estadística en la toma de decisiones y formulación de políticas.</li>
+                    <li>Evaluación de programas y métodos educativos.</li>
+                    <li>Optimización de recursos y calidad educativa.</li>
+                    <li>Casos prácticos y estudios de caso (ej. PISA).</li>
+                    <li>Desafíos y consideraciones éticas (generalizabilidad, contextualización).</li>
+                    <li>Herramientas de software estadístico (SPSS, R, Python).</li>
+                    <li>El futuro de la estadística aplicada y la alfabetización en datos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="referencias" class="section-card scroll-mt-20">
+            <h2 class="font-bold">7. Referencias y Bibliografía 📖</h2>
+            <p class="mb-6 text-base leading-relaxed">Aquí se listan los textos clave y las referencias utilizadas para la elaboración de este informe y el diseño del curso.</p>
+            
+            <h3 class="font-semibold text-lg mt-6 mb-4 text-[#005691]">Tabla 2: Libros de Referencia Recomendados por Enfoque</h3>
+            <div class="overflow-x-auto mb-8">
+                <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+                    <thead class="bg-[#00A8E8] text-white">
+                        <tr>
+                            <th class="py-2 px-4 text-left text-sm font-semibold border-b border-gray-300 rounded-tl-lg">Título del Libro</th>
+                            <th class="py-2 px-4 text-left text-sm font-semibold border-b border-gray-300">Autor(es)</th>
+                            <th class="py-2 px-4 text-left text-sm font-semibold border-b border-gray-300">Editorial / Universidad Reconocida</th>
+                            <th class="py-2 px-4 text-left text-sm font-semibold border-b border-gray-300">Año de Publicación</th>
+                            <th class="py-2 px-4 text-left text-sm font-semibold border-b border-gray-300">Enfoque Principal</th>
+                            <th class="py-2 px-4 text-left text-sm font-semibold border-b border-gray-300 rounded-tr-lg">Breve Descripción y Relevancia para el Curso</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-2 px-4 text-sm text-gray-700">Practical Statistics for Educators</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Ruth Ravid</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Rowman & Littlefield</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">2020 (6ª Ed.)</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Metodológico y Aplicado</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Se centra en los conceptos esenciales de estadística educativa, cómo usar e interpretar pruebas estadísticas, con ejemplos directos de educación y minimizando cálculos.</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-2 px-4 text-sm text-gray-700"><a href="https://openstax.org/books/introductory-statistics-2e/pages/preface" target="_blank" class="text-blue-600 hover:underline">Introductory Statistics</a></td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Barbara Illowsky, Susan Dean</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">OpenStax (Rice University)</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">2018/2023</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Teórico y Aplicado</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Un texto de acceso abierto que cubre los fundamentos estadísticos con un enfoque en la aplicación sobre la teoría, ideal para estudiantes de posgrado de diversas disciplinas.</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-2 px-4 text-sm text-gray-700">Statistics: The Art and Science of Learning from Data</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Agresti, Franklin</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Pearson/Prentice Hall</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">N/A</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Teórico</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Un libro de texto general de estadística ampliamente utilizado que proporciona una base teórica sólida.</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-2 px-4 text-sm text-gray-700">A Quantitative Tour of the Social Sciences</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Andrew Gelman, Jeronimo Cortina (Eds.)</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Cambridge University Press</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">2009</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Teórico y Metodológico</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Ofrece una visión accesible de la investigación cuantitativa en ciencias sociales, valioso para comprender la aplicación de la estadística en contextos sociales y educativos.</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-2 px-4 text-sm text-gray-700">Quantitative Methods in Educational Research: The Role of Numbers Made Easy</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Stephen Gorard</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Bloomsbury Academic</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">2001</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Metodológico y Aplicado</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Guía integral para la investigación cuantitativa, enfatizando la interpretación y el uso de datos secundarios, relevante para la práctica investigadora en educación.</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-2 px-4 text-sm text-gray-700"><a href="http://ndl.ethernet.edu.et/bitstream/123456789/79496/1/Quantitative%20data%20analysis.pdf" target="_blank" class="text-blue-600 hover:underline"><i>Doing quantitative research in education with SPSS / IBM SPSS Statistics</i></a></td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Daniel Muijs</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">SAGE Publications</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">2004</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Metodológico y Aplicado</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Textos prácticos para la aplicación de métodos cuantitativos en educación utilizando software estadístico, esencial para el análisis de datos.</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-2 px-4 text-sm text-gray-700">Quantitative Research in Education: A Primer</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Wayne K. Hoy, Curt M. Adams</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">SAGE Publications</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">2015 (2ª Ed.)</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Metodológico y Aplicado</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Texto conciso y práctico para aliviar la ansiedad sobre la investigación cuantitativa, centrado en la comprensión conceptual y la utilidad práctica en educación.</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-2 px-4 text-sm text-gray-700">Statistics Made Simple for School Leaders: A New Approach for Using Student, Staff, and Community Data</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Susan R. Carroll, David J. Carroll</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Rowman & Littlefield</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">N/A (3ª Ed.)</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Gestión y Aplicado</td>
+                            <td class="py-2 px-4 text-sm text-gray-700">Manual para líderes escolares que enfatiza el uso de datos para la toma de decisiones informada, directamente relevante para la planificación y gestión educativa.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <ul class="list-decimal list-inside text-base leading-relaxed space-y-2 pl-4 text-gray-700">
+                <li>Ravid, R. (2020). <i>Practical statistics for educators</i> (6th ed.). Rowman & Littlefield.</li>
+                <li>Agresti, A., & Franklin, C. (n.d.). <i>Statistics: The art and science of learning from data</i>. Pearson/Prentice Hall.</li>
+                <li>Carroll, S. R., & Carroll, D. J. (n.d.). <i>Statistics made simple for school leaders: A new approach for using student, staff, and Community Data</i> (3rd ed.). Rowman & Littlefield.</li>
+                <li>Gelman, A., & Cortina, J. (Eds.). (2009). <i>A quantitative tour of the social sciences</i>. Cambridge University Press.</li>
+                <li>Gorard, S. (2001). <i>Quantitative methods in educational research: The role of numbers made easy</i>. Bloomsbury Academic.</li>
+                <li>Hoy, W. K., & Adams, C. M. (2015). <i>Quantitative research in education: A primer</i> (2nd ed.). SAGE Publications.</li>
+                <li>Illowsky, B., & Dean, S. (2018/2023). <a href="https://openstax.org/books/introductory-statistics-2e/pages/preface" target="_blank" class="text-blue-600 hover:underline"><i>Introductory statistics</i></a>. OpenStax, Rice University.</li>
+                <li>Muijs, D. (2004). <a href="http://ndl.ethernet.edu.et/bitstream/123456789/79496/1/Quantitative%20data%20analysis.pdf" target="_blank" class="text-blue-600 hover:underline"><i>Doing quantitative research in education with SPSS / IBM SPSS Statistics</i></a>. SAGE Publications.</li>
+                
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#005691] text-white text-center p-8 mt-12 w-full">
+        <p class="text-lg">&copy; 2025 Estadística Aplicada a la Educación. Universidad Chapultepec.</p>
+        <p class="text-sm opacity-80 mt-1">Dirección: Eugenia 1008, Del Valle, Benito Juárez, 03100 Ciudad de México, CDMX <br>
+            Infografía basada en el informe "Estadística Educativa: Curso y Referencias", con apoyo de IA.
+        </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
